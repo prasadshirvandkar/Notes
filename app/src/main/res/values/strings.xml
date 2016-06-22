@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="no_notes">No Notes</string>
+    <string name="click_the_button_to_add_notes">Click the + Button to Add Notes</string>
+    <string name="title">Title</string>
+    <string name="content">Content</string>
+    <string name="titleview">TITLE</string>
+    <string name="contentview">CONTENT</string>
+    <string name="about">About</string>
+    <string name="desc">This is a Simple Notes App which is Small Part of my App <a href="https://play.google.com/store/apps/details?id=com.revodroid.notes.notes">Material Notes on Play Store</a> written in Kotlin.\nDesigned and Developed by:\n<b>Prasad Shirvandkar</b></string>
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+    android:id="@+id/rl1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+            android:id="@+id/llmain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            android:elevation="6dp"
+            android:fitsSystemWindows="true" tools:targetApi="lollipop">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_edit"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:fitsSystemWindows="true">
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:fitsSystemWindows="true">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayoutTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+
+                <EditText
+                        android:id="@+id/note_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/title"
+                        android:paddingLeft="10dp"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:inputType="textCapWords|textCapSentences"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:tag="text_color|primary_text_inverse,text_size|title"
+                        android:singleLine="true" tools:ignore="RtlSymmetry"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_save"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="-30dp"
+        android:adjustViewBounds="false"
+        android:tag="bg_tint_accent_color_selector_lighter"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:scrollbars="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:layout_marginTop="-25dp"
+        android:paddingTop="15dp"
+        android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayoutContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="17dp"
+                android:layout_marginTop="-20dp"
+                android:paddingBottom="5dp">
+
+                <EditText
+                    android:id="@+id/note_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/content"
+                    android:paddingTop="8dp"
+                    android:textSize="16sp"
+                    android:gravity="top"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="7dp"
+                    android:tag="tint_accent_color,text_primary,textsize_subheading"
+                    android:layout_marginRight="3dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

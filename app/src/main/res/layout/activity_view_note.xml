@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:fitsSystemWindows="true"
+    android:id="@+id/clayoutcl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:elevation="6dp"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            tools:targetApi="lollipop">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="6dp"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/colorPrimary"
+                app:expandedTitleMarginBottom="45dp"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="35dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:expandedTitleTextAppearance="@style/HeaderTitleStyle"
+                app:statusBarScrim="@color/colorPrimaryDark"
+                tools:targetApi="lollipop">
+
+            <TextView
+                android:id="@+id/titlev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titleview"
+                android:textSize="12sp"
+                android:layout_marginTop="85dp"
+                android:layout_marginLeft="16dp"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                    android:id="@+id/textUpdated"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:paddingBottom="7dp"
+                    android:paddingRight="12dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:gravity="right"
+                    android:layout_gravity="right|bottom"
+                    tools:ignore="RtlSymmetry"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_collapse"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginTop="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contentv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="6dp"
+                android:text="@string/contentview"
+                android:textSize="12sp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/holder_relative_layout"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/note_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:textSize="16sp"
+                        android:autoLink="web|phone|email"
+                        android:linksClickable="true"
+                        android:layout_margin="8dp"
+                        android:tag="text_link_accent_color"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/edit_note_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@drawable/ic_edit"
+        android:tag="bg_tint_accent_color_selector_lighter"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp" />
+
+</android.support.design.widget.CoordinatorLayout>
