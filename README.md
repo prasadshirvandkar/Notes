@@ -1,4 +1,4 @@
-Notes 
+<b>Notes</b> 
 
 Simple Notes App which is a Small Part of My App "Material Notes" on Play Store Written in Kotlin.
 
