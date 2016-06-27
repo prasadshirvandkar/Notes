@@ -8,5 +8,5 @@ Simple Notes App which is a Small Part of My App "Material Notes" on Play Store 
 
 <p><b>My App "Material Notes" on Play Store</b></p>
 <a href="https://play.google.com/store/apps/details?id=com.revodroid.notes.notes">
-<img height="300" alt="Get it on Google Play" src="https://cloud.githubusercontent.com/assets/9977126/16392085/b6c4bcae-3cc7-11e6-9f35-6b10b36b0e97.png" />
+<img height="100" alt="Get it on Google Play" src="https://cloud.githubusercontent.com/assets/9977126/16392085/b6c4bcae-3cc7-11e6-9f35-6b10b36b0e97.png" />
 </a>
